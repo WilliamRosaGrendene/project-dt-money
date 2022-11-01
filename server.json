@@ -1,0 +1,28 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "description": "Desenvolvimento de site",
+            "type": "income",
+            "category": "Venda",
+            "price": 4000,
+            "createdAt": "2022-11-01T13:27:45.467Z"
+        },
+        {
+            "id": 2,
+            "description": "Xis salada",
+            "type": "outcome",
+            "category": "Alimentação",
+            "price": 800,
+            "createdAt": "2022-10-01T13:27:45.467Z"
+        },
+        {
+            "id": 3,
+            "description": "Baile",
+            "type": "income",
+            "category": "Festa",
+            "price": 5000,
+            "createdAt": "2022-12-01T13:27:45.467Z"
+        }
+    ]
+}
