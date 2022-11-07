@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://williamrosagrendene.github.io/project-dt-money/",
+  "homepage": "https://williamrosagrendene.github.io/project-dt-money",
   "scripts": {
     "dev": "vite",
     "dev:server": "json-server server.json -p 3333 -w -d 500",
