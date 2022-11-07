@@ -14,7 +14,7 @@ const newTransactionFormSchema = z.object({
     type: z.enum(['income', 'outcome'])
 })
 
-type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema>
+type NewTransactionFormInputs = z.infer<typeof newTransactionFormSchema> //tipagem
 
 export function NewTransactionModal() {
 
@@ -22,18 +22,19 @@ export function NewTransactionModal() {
         return context.createTransaction
     })
 
-    const{
-        control,
-        register,
-        handleSubmit,
+    const{ //const oq?
+        control, //utilizado quando vem uma info que não é de uma campo nativo do html ex input
+        register, //pega os valores digitados nos inputs
+        handleSubmit, //salva os dados em uma função do formulario
         reset
     } = useForm<NewTransactionFormInputs>({
         resolver: zodResolver(newTransactionFormSchema),
-        defaultValues:{
+        defaultValues:{ // seta o value incial do botão no forumlario
             type: 'income'
         }
     })
 
+    //função para criar uma nova transação que vem do formulário onSubmit
     async function handleCreateNewTransaction(data: NewTransactionFormInputs){
         const {description, price, category, type} = data;
 
@@ -59,7 +60,7 @@ export function NewTransactionModal() {
 
             <Dialog.Title> Nova Transação</Dialog.Title>
 
-            <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
+             <form onSubmit={handleSubmit(handleCreateNewTransaction)}> {/*envia os dados para a função handleCreateNewTransaction */}
                 <input 
                     type="text" 
                     placeholder="Descrição" 
@@ -79,8 +80,8 @@ export function NewTransactionModal() {
                     {...register('category')}
                 />
 
-                <Controller
-                    control={control}
+                <Controller //componente do hookForm para chamar o {control}
+                    control={control} //envia os dados do botão selecionado
                     name="type"
                     render={({field}) => {
                         return(

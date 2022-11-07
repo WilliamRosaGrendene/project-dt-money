@@ -26,7 +26,7 @@ const searchFormSchema = z.object({
     query: z.string(),
 })
 
-type SearchFormInputs = z.infer<typeof searchFormSchema>
+type SearchFormInputs = z.infer<typeof searchFormSchema> // tipagem dos campos do formulário
 
 export function SearchForm(){
 
@@ -39,8 +39,8 @@ export function SearchForm(){
         resolver: zodResolver(searchFormSchema)
     })
 
-    async function handleSearchTransactions( data: SearchFormInputs){
-        await fetchTranssactions(data.query) // await para simular um pesquisa no banco, uma atraso no carregamento
+    async function handleSearchTransactions( data: SearchFormInputs){ //recebe os dados do formulario e a tipagem
+        await fetchTranssactions(data.query) 
     }
 
     return(
@@ -48,7 +48,7 @@ export function SearchForm(){
             <input 
                 type="text" 
                 placeholder="Busque uma transação"
-                {...register('query')}
+                {...register('query')} //seria tipo um id? uma variavel que entra valores pesquisados? 
             />
 
             <button type="submit" disabled={isSubmitting}>

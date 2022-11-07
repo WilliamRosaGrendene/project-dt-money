@@ -47,6 +47,22 @@
       "type": "outcome",
       "createdAt": "2022-11-03T17:40:24.489Z",
       "id": 6
+    },
+    {
+      "createdAt": "2022-11-03T17:40:24.489Z",
+      "description": "teste Postman",
+      "type": "income",
+      "category": "Venda",
+      "price": 2000,
+      "id": 7
+    },
+    {
+      "description": "Almoço no Caldeira",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 90,
+      "createdAt": "2022-11-07T17:40:24.489Z",
+      "id": 8
     }
   ]
 }

@@ -51,7 +51,7 @@ export function TransactionsProvider({children}: TransactionsProviderProps){
     const createTransaction = useCallback( async (data: CreateTransactionsInput) => {
         const {description, price, category, type} = data;
 
-        const response = await api.post('/transactions',{ //metodo que adiciona na api a nova transaction
+        const response = await api.post('/transactions',{ //adiciona na api a nova transaction
             description,
             price,
             category,
