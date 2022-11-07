@@ -3,11 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://williamrosagrendene.github.io/project-dt-money/",
   "scripts": {
     "dev": "vite",
     "dev:server": "json-server server.json -p 3333 -w -d 500",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@hookform/resolvers": "^2.9.10",
@@ -34,4 +37,5 @@
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
   }
+  
 }
